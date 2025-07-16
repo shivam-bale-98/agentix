@@ -10,7 +10,6 @@ $data = json_decode($data, true);
 $fileversion = $data['version'];
 ?>
 <script src="<?php //echo $this->getThemePath() . '/dist/js/vendors.min.js'; ?>"></script>
-<script src="<?php echo $this->getThemePath() . '/dist/js/app-'.$fileversion.'.min.js?v='.$version; ?>"></script>
 <script src="<?php echo $this->getThemePath() . '/assets/js/vendor/jquery.js'; ?>"></script>
 <script src="<?php echo $this->getThemePath() . '/assets/js/bootstrap-bundle.js'; ?>"></script>
 <script src="<?php echo $this->getThemePath() . '/assets/js/swiper-bundle.js'; ?>"></script>

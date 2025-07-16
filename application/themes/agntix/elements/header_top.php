@@ -102,7 +102,6 @@ if (Localization::activeLanguage() === 'ar') {
     // $this->addHeaderItem($htmlHelper->css('css/style.css'));
     // $this->addHeaderItem($htmlHelper->css('css/print.css'));
     ?>
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/dist/css/app' . $direction . '.min.css?v=' . $version; ?>">
     <!-- <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/dist/css/vendors.min.css'; ?>">     -->
     <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/bootstrap.css'?>">
     <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/slick.css'?>">
@@ -143,7 +142,7 @@ if (Localization::activeLanguage() === 'ar') {
 
 </head>
 
-<body class="<?php echo $bodyClass; ?>">
+<body class="tp-magic-cursor black-bg-4 <?php echo $bodyClass; ?>">
     <!-- Site Loader -->
     <div class="site-loader">
         <div class="logo-middle">
