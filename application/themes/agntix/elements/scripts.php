@@ -9,8 +9,12 @@ $data = file_get_contents($json_file_path);
 $data = json_decode($data, true);
 $fileversion = $data['version'];
 ?>
-<script src="<?php //echo $this->getThemePath() . '/dist/js/vendors.min.js'; ?>"></script>
+<script src="<?php echo $this->getThemePath() . '/dist/js/app-'.$fileversion.'.min.js?v='.$version; ?>"></script>
+
+<?php if (!$c->isEditMode()): ?>
 <script src="<?php echo $this->getThemePath() . '/assets/js/vendor/jquery.js'; ?>"></script>
+<?php endif; ?>
+<script src="<?php  //echo $this->getThemePath() . '/assets/js/vendor/jquery.js'; ?>"></script>
 <script src="<?php echo $this->getThemePath() . '/assets/js/bootstrap-bundle.js'; ?>"></script>
 <script src="<?php echo $this->getThemePath() . '/assets/js/swiper-bundle.js'; ?>"></script>
 <script src="<?php echo $this->getThemePath() . '/assets/js/plugin.js'; ?>"></script>
@@ -37,6 +41,7 @@ $fileversion = $data['version'];
 <script type="module" src="<?php echo $this->getThemePath() . '/assets/js/distortion-img.js'; ?>"></script>
 <script type="module" src="<?php echo $this->getThemePath() . '/assets/js/skew-slider/index.js'; ?>"></script>
 <script type="module" src="<?php echo $this->getThemePath() . '/assets/js/img-revel/index.js'; ?>"></script>
+
 
 
 

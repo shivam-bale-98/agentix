@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btHomepageBanner">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="hideBlock" type="C" size="1">
+            <unsigned/>
+        </field>
+        <field name="title" type="X2"></field>
+        <field name="featureTitle" type="C" size="255"></field>
+        <field name="featureValue" type="C" size="255"></field>
+        <field name="linkTag" type="C" size="12"></field>
+        <field name="linkTag_Title" type="C"></field>
+        <field name="linkTag_Page" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="linkTag_File" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="linkTag_Image" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="linkTag_URL" type="C"></field>
+        <field name="linkTag_Relative_URL" type="C"></field>
+        <field name="imageOne" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageTwo" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageThree" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageFour" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageFive" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageSix" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageSeven" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageEight" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+    </table>
+</schema>

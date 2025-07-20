@@ -51,21 +51,21 @@ if (Localization::activeLanguage() === 'ar') {
     $ih = new \Application\Concrete\Helpers\ImageHelper();
     $meta_description = ($c->getAttribute('meta_description')) ? $c->getAttribute('meta_description') : $page->getCollectionDescription();
 
-    $meta_title = ($c->getAttribute('meta_title')) ? $c->getAttribute('meta_title') : $site." | ".$page->getCollectionName();
+    $meta_title = ($c->getAttribute('meta_title')) ? $c->getAttribute('meta_title') : $site . " | " . $page->getCollectionName();
     $seo_image = $c->getAttribute('seo_image');
     $banner_image = $c->getAttribute('banner_image');
     $thumbnail_image = $c->getAttribute('thumbnail_image');
     $listing_image = $c->getAttribute('listing_image');
-    if($seo_image) {
+    if ($seo_image) {
         $meta_image = $ih->getThumbnail($seo_image, 1000, 1000);
-    } elseif(!$seo_image && $banner_image) {
+    } elseif (!$seo_image && $banner_image) {
         $meta_image = $ih->getThumbnail($banner_image, 1000, 1000);
-    } else if(!$banner_image && $thumbnail_image) {
+    } else if (!$banner_image && $thumbnail_image) {
         $meta_image = $ih->getThumbnail($thumbnail_image, 1000, 1000);
-    } else if(!$banner_image && !$thumbnail_image && $listing_image) {
+    } else if (!$banner_image && !$thumbnail_image && $listing_image) {
         $meta_image = $ih->getThumbnail($listing_image, 1000, 1000);
     } else {
-        $meta_image = BASE_URL . $this->getThemePath() ."/dist/images/logo.png";
+        $meta_image = BASE_URL . $this->getThemePath() . "/dist/images/logo.png";
     }
     ?>
 
@@ -77,7 +77,7 @@ if (Localization::activeLanguage() === 'ar') {
     <meta name="twitter:title" content="<?= $meta_title; ?>">
     <meta name="twitter:image" content="<?php echo $meta_image; ?>">
     <meta name="twitter:description" content="<?php echo  $meta_description; ?>">
-    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:card" content="summary_large_image" />
 
     <?php
     //print core cms files
@@ -103,21 +103,22 @@ if (Localization::activeLanguage() === 'ar') {
     // $this->addHeaderItem($htmlHelper->css('css/print.css'));
     ?>
     <!-- <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/dist/css/vendors.min.css'; ?>">     -->
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/bootstrap.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/slick.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/swiper-bundle.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/magnific-popup.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/font-awesome-pro.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/spacing.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/atropos.min.css'?>">
-    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/main.css'?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/dist/css/app.min.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/bootstrap.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/slick.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/swiper-bundle.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/magnific-popup.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/font-awesome-pro.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/spacing.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/atropos.min.css' ?>">
+    <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/assets/css/main.css' ?>">
 
     <?php
-        if($is_arabic==1) {
-            ?>
-            <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/dist/css/arabic.min.css?v='.$version; ?>">
-            <?php
-        }
+    if ($is_arabic == 1) {
+    ?>
+        <link rel="stylesheet" href="<?php echo $this->getThemePath() . '/dist/css/arabic.min.css?v=' . $version; ?>">
+    <?php
+    }
 
     ?>
     <script>
@@ -243,5 +244,5 @@ if (Localization::activeLanguage() === 'ar') {
         }
     </script>
     <!-- Site Loader End -->
-
-    <div class="wrapper <?php echo $c->getPageWrapperClass() ?>"><!-- opening of wrapper div ends in footer_bottom.php -->
+    
+            <div class="wrapper <?php echo $c->getPageWrapperClass() ?>"><!-- opening of wrapper div ends in footer_bottom.php -->

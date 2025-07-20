@@ -9685,7 +9685,7 @@ body.tp-magic-cursor #magic-cursor {
     padding-bottom: 50px;
   }
 }
-.des-footer-middle > span {
+.des-footer-middle > p > span {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.3;
