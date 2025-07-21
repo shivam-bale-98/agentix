@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btThreeColumnGalleryBlock">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="hideBlock" type="C" size="1">
+            <unsigned/>
+        </field>
+        <field name="cardOneImage" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="logo" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="cardTitle" type="C" size="255"></field>
+        <field name="cardSubtitle" type="C" size="255"></field>
+        <field name="link" type="C" size="12"></field>
+        <field name="link_Title" type="C"></field>
+        <field name="link_Page" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="link_URL" type="C"></field>
+        <field name="link_Relative_URL" type="C"></field>
+        <field name="cardTwoImage" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="cardThreeVideo" type="X"></field>
+        <field name="cardThreeImage" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="cardFourImage" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageRight" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+    </table>
+</schema>

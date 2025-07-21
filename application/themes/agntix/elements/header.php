@@ -8,6 +8,90 @@ $themePath = $this->getThemePath();
 <?php $this->inc('elements/header_top.php'); ?>
 
 
+   <!-- Begin magic cursor -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <!-- End magic cursor -->
+
+    <!-- preloader -->
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- preloader end  -->
+
+    <!-- back to top start -->
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+    <!-- back to top end -->
+
+    <!-- offcanvas start -->
+
+    <div class="tp-offcanvas-2-area p-relative offcanvas-2-black-bg">
+        <div class="tp-offcanvas-2-bg is-left left-box"></div>
+        <div class="tp-offcanvas-2-bg is-right right-box d-none d-md-block"></div>
+        <div class="tp-offcanvas-2-wrapper">
+            <div class="tp-offcanvas-2-left left-box">
+                <div class="tp-offcanvas-2-left-wrap d-flex justify-content-between align-items-center">
+                    <div class="tp-offcanvas-2-logo">
+                        <a href="index.html">
+                            <img class="logo-1" data-width="140" src="<?php echo $this->getThemePath() . '/assets/img/logo/logo-white.png'; ?>" alt="Agentix">
+                            <img class="logo-2" data-width="140" src="<?php echo $this->getThemePath() . '/assets/img/logo/logo-black.png'; ?>" alt="Agentix">
+                        </a>
+                    </div>
+                    <div class="tp-offcanvas-2-close d-md-none text-end">
+                        <button class="tp-offcanvas-2-close-btn">
+                            <span class="text">
+                                <span>close</span>
+                            </span>
+                            <span class="d-inline-block">
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32.621" height="1.00918" transform="matrix(0.704882 0.709325 -0.704882 0.709325 1.0061 0)" fill="currentcolor"></rect>
+                                        <rect width="32.621" height="1.00918" transform="matrix(0.704882 -0.709325 0.704882 0.709325 0 23.2842)" fill="currentcolor"></rect>
+                                    </svg>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tp-offcanvas-menu counter-row">
+                    <nav></nav>
+                </div>
+            </div>
+            <div class="tp-offcanvas-2-right right-box d-none d-md-block p-relative">
+                <div class="tp-offcanvas-2-close text-end">
+                    <button class="tp-offcanvas-2-close-btn">
+                        <span class="text"><span>close</span></span>
+                        <span class="d-inline-block">
+                            <span>
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.80859 9.80762L28.1934 28.1924" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.80859 28.1924L28.1934 9.80761" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <?php $s = Stack::getByName("Menu Address");
+                      $s->display(); ?>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas end -->
 
 <header>
 
@@ -35,82 +119,12 @@ $themePath = $this->getThemePath();
     </div>
 
     <nav class="tp-mobile-menu-active d-none">
-        <ul>
-            <li class="has-dropdown p-static is-active">
-                <a href="#">Home</a>
-                <ul class="tp-submenu submenu">
-                    <li><a href="index-dark.html">Modern Agency</a></li>
-                    <li><a href="index-digital-marketing-dark.html">Digital Marketing</a></li>
-                    <li><a href="index-design-agency-dark.html">Design Agency</a></li>
-                    <li><a href="index-unique-ai-image-dark.html">Unique AI Images</a></li>
-                    <li><a href="index-corporate-agency-dark.html">Corporate Agency</a></li>
-                    <li><a href="index-mobile-application-dark.html">Mobile Application</a></li>
-                    <li><a href="index-it-solution-dark.html">IT Solutions</a></li>
-                    <li><a href="index-cryptocurrency-dark.html">Cryptocurrency</a></li>
-                </ul>
-            </li>
-            <li class="has-dropdown p-static is-active">
-                <a href="#">Pages</a>
-                <ul class="tp-submenu submenu">
-                    <li><a href="about-me-dark.html">About Me</a></li>
-                    <li><a href="about-us-dark.html">About Us</a></li>
-                    <li><a href="service-1-dark.html">Services</a></li>
-                    <li><a href="service-details-2-dark.html">Service Details</a></li>
-                    <li><a href="career-dark.html">Carrer</a></li>
-                    <li><a href="career-details-dark.html">Carrer Details</a></li>
-                    <li><a href="team-dark.html">Team</a></li>
-                    <li><a href="team-details-dark.html">Team Details</a></li>
-                    <li><a href="pricing-dark.html">Pricing</a></li>
-                    <li><a href="faq-dark.html">Faq's</a></li>
-                </ul>
-            </li>
-            <li class="has-dropdown p-static is-active">
-                <a href="#">Projects</a>
-                <ul class="tp-submenu submenu">
-                    <li><a href="portfolio-webgl-showcase.html">Webgl Showcase</a></li>
-                    <li><a href="portfolio-coverflow-slider.html">Coverflow Slider</a></li>
-                    <li><a href="portfolio-creative-thumb-slider.html">Creative Thumb Slider</a></li>
-                    <li><a href="portfolio-creative-skew-slider.html">Creative Skew Slider</a></li>
-                    <li><a href="portfolio-creative-text-slider.html">Creative Text Slider</a></li>
-                    <li><a href="portfolio-parallax-slider.html">Parallax Slider</a></li>
-                    <li><a href="portfolio-perspective-slider.html">Paspective Showcase</a></li>
-                </ul>
-            </li>
-            <li class="has-dropdown is-active">
-                <a href="#">Blog</a>
-                <ul class="tp-submenu submenu">
-                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                    <li><a href="blog-standard.html">Blog Classic</a></li>
-                    <li><a href="blog-list.html">Blog Listing</a></li>
-                    <li><a href="blog-masonry.html">Masonry</a></li>
-                    <li><a href="blog-details.html">Blog Single Post</a></li>
-                </ul>
-            </li>
-            <li class="has-dropdown is-active">
-                <a href="#">Shop</a>
-                <ul class="tp-submenu submenu">
-                    <li><a href="index-shop-modern-dark.html">Shop Modern</a></li>
-                    <li><a href="shop-details-dark.html">Shop Details</a></li>
-                    <li><a href="my-account.html">My Account</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="login.html">LogIn</a></li>
-                </ul>
-            </li>
-            <li class="has-dropdown is-active">
-                <a href="#">Contact</a>
-                <ul class="tp-submenu submenu">
-                    <li><a href="contact-me-dark.html">Contact Me</a></li>
-                    <li><a href="contact-us-dark.html">Contact Us</a></li>
-                    <li><a href="contact-dark.html">Get In Touch</a></li>
-                </ul>
-            </li>
-        </ul>
+        <?php $s = Stack::getByName("Mega Menu");
+        $s->display(); ?>
     </nav>
-    
+
 
 </header>
 
 <div id="smooth-wrapper">
-        <div id="smooth-content">
+    <div id="smooth-content">
