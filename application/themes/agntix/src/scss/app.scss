@@ -3,5 +3,239 @@
 
 // Tailwind if needed
 // @tailwind base;
+
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+
+@function rem($val) {
+  $rem: math.div($val, $browser-context) + rem;
+  @return $rem;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+.filters {
+  .select-box {
+    width: 200px;
+    &.multi-select {
+      max-width: 50% !important;
+      width: 100% !important;
+      min-width: auto !important;
+      @include breakpoint(991) {
+        max-width: 100% !important;
+      }
+    }
+    &.single-select {
+       @include breakpoint(991) {
+         max-width: 100% !important;
+         width: 100% !important;
+       }
+      .select2-container{
+        height: 100% !important;
+        .selection {
+          height: 100%;
+          display: inline;
+          .select2-selection--single {
+            height: 100% !important;
+          }
+        }
+      }
+    }
+  }
+  .select2-container {
+    width: 100% !important;
+    .select2-selection--single {
+      background-color: transparent;
+      border-radius: 3rem !important;
+      height: auto;
+      border: 1px solid #fff;
+      .select2-selection__rendered {
+        padding: 20px;
+        color: white;
+        font-size: 16px;
+        line-height: 1;
+      }
+      .select2-selection__arrow {
+        height: 12px;
+        width: 12px;
+        top: calc(50% - 8px);
+        right: 20px;
+        transform: translateY(0%) rotate(-135deg);
+        transition: 0.3s all ease-out;
+        position: absolute;
+
+        b {
+          height: 14px;
+          width: 14px;
+          border-top: 1px solid #fff;
+          border-left: 1px solid #fff;
+          border-right: 0;
+          border-bottom: 0;
+          border-width: 1px !important;
+          top: 0;
+          left: 0;
+          margin-top: 0;
+          margin-left: 0;
+          transition: 0.3s all ease-out;
+        }
+      }
+    }
+    .select2-selection--multiple {
+      background-color: transparent !important;
+      padding: 15px !important;
+      border-radius: 3rem !important;
+      border: 1px solid #fff !important;
+      min-height: auto !important;
+      display: flex;
+      .select2-search--inline {
+        height: 30px !important;
+        display: inline-flex !important;
+        align-items: center;
+        .select2-search__field {
+          margin: 0 !important;
+          font-size: 1rem;
+          line-height: 1.2;
+          font-weight: 400;
+          color: white;
+          height: 20px;
+          position: relative;
+          // top: -2px;
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+
+      .select2-selection__rendered {
+        height: 30px !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        color: white;
+        @include breakpoint(991) {
+           height: auto !important;
+           gap: 5px !important;
+        }
+        .select2-selection__choice {
+          margin-top: 0px !important;
+          background-color: var(--tp-common-red-3) !important;
+          border: none !important;
+          color: white !important;
+          border-radius: 3rem !important;
+          font-size: 16px !important;
+          line-height: 1.2 !important;
+          display: flex;
+
+          
+        }
+      }
+      .select2-selection__choice__remove {
+        height: 100%;
+        color: white;
+        padding-left: 10px;
+      }
+      .select2-selection__choice__display {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .dropdown-result {
+    position: absolute;
+    min-width: 15.625rem;
+    min-height: 16.25rem;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+    box-shadow: 0 0.25rem 3.375rem 0 rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(767) {
+      // left: 50%;
+      // transform: translate(-50%, 0%);
+      left: auto;
+      right: 0;
+      transform: translateX(0) !important;
+      top: 6.5rem;
+      min-width: 100%;
+    }
+
+    .select2-container {
+      width: 100% !important;
+      height: 100% !important;
+      top: 0 !important;
+      left: 0 !important;
+
+      .select2-dropdown {
+        width: 100% !important;
+      }
+    }
+
+    .select2-dropdown {
+      border: none;
+      // position: relative;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .select2-results {
+      .select2-results__option--selected{
+          background-color: rgba($color: #FF5722, $alpha: 0.3);
+        }
+      .select2-results__options {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-height: none;
+        height: 100%;
+        box-sizing: border-box;
+        z-index: 2;
+
+        .select2-results__option,
+        .select2-selection__placeholder {
+          font-size: 1rem;
+          line-height: 1.2;
+          font-weight: 300;
+          color: black;
+
+          text-transform: capitalize;
+          padding: 16px 10px;
+          // font-variation-settings: "wght" 300;
+          will-change: font-weight, color, background-color;
+          transition: all 0.4s ease-out;
+          // transition: 0.4s all ease-out;
+
+          &.select-2-results__option--selected,
+          &.select2-results__option--highlighted {
+            background-color: var(--tp-common-red-3);
+            color: var(--tp-common-white);
+            // font-weight:  400;
+            // text-shadow: 0.7px 0 0 rgba($color: black, $alpha: 1);
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+.select2-container--default.select2-container--open {
+  .select2-selection--single {
+    .select2-selection__arrow {
+      transform: rotate(44deg) translate(5px, 5px);
+      b {
+        border-color: #fff !important;
+      }
+    }
+  }
+}

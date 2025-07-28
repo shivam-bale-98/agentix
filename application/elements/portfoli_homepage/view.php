@@ -26,7 +26,6 @@
                 <h2 class="des-portfolio-title"><a href="<?php echo $url; ?>"><?php echo $title ?></a></h2>
             </div>
         </div>
-    <?php }
-} else { ?>
+    <?php } } else { ?>
     <h4><?= t("No Items Found") ?></h4>
 <?php } ?>

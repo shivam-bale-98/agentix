@@ -13,6 +13,7 @@ use Core;
 class Page extends \Concrete\Core\Page\Page
 {
     protected $thumbnail;
+    protected $mobile_thumbnail;
     protected $banner;
     protected $favoritesID;
     protected $downloadsID;
@@ -38,6 +39,28 @@ class Page extends \Concrete\Core\Page\Page
             $this->thumbnail = BASE_URL . PageTheme::getSiteTheme()->getThemeURL() . '/assets/images/placeholder.jpg';
         }
         return $this->thumbnail;
+    }
+
+    public function getThumbnailMobileImage($width = 400, $height = 400, $crop = false)
+    {
+        /** @var File $file */
+        /** @var \Concrete\Core\File\Image\BasicThumbnailer $ih */
+        $ih = Core::make('helper/image');
+
+        if (!$this->mobile_thumbnail) {
+            $image = $this->getAttribute('mobile_thumbnail');
+            if ($image && $image instanceof File) {
+                $image = $ih->getThumbnail($image, $width, $height, $crop);
+                if ($image) {
+                    $this->mobile_thumbnail = $image->src;
+                }
+            }
+        }
+
+        if (!$this->mobile_thumbnail) {
+            $this->mobile_thumbnail = BASE_URL . PageTheme::getSiteTheme()->getThemeURL() . '/assets/images/placeholder.jpg';
+        }
+        return $this->mobile_thumbnail;
     }
 
     public function getBannerImage($width = 1000, $height = 1000, $crop = false)
