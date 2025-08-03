@@ -69,6 +69,9 @@
 .mb-10 {
   margin-bottom: 2.5rem;
 }
+.mb-20 {
+  margin-bottom: 5rem;
+}
 .mb-40 {
   margin-bottom: 10rem;
 }
@@ -152,6 +155,12 @@
 }
 .pb-60 {
   padding-bottom: 15rem;
+}
+.pl-20 {
+  padding-left: 5rem;
+}
+.pt-40 {
+  padding-top: 10rem;
 }
 .text-center {
   text-align: center;
@@ -396,7 +405,15 @@
   --tw-translate-y: 0px !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
+@media not all and (min-width: 640px) {
+  .max-sm\:hidden {
+    display: none;
+  }
+}
 @media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
   .sm\:\!-translate-y-11 {
     --tw-translate-y: -2.75rem !important;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;

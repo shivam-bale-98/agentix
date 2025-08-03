@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btPortfolioDetailGallery">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="hideBlock" type="C" size="1">
+            <unsigned/>
+        </field>
+        <field name="imageFull" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="video" type="C" size="255"></field>
+        <field name="ImageTwo" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageThree" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+    </table>
+</schema>

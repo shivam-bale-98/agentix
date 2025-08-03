@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btTwoColumnFeaturesBlock">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="hideBlock" type="C" size="1">
+            <unsigned/>
+        </field>
+        <field name="subtitle" type="C" size="255"></field>
+        <field name="title" type="C" size="255"></field>
+        <field name="link" type="C" size="12"></field>
+        <field name="link_Title" type="C"></field>
+        <field name="link_Page" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="link_URL" type="C"></field>
+        <field name="link_Relative_URL" type="C"></field>
+        <field name="description_1" type="X2"></field>
+    </table>
+    <table name="btTwoColumnFeaturesBlockFeaturesEntries">
+        <field name="id" type="I">
+            <key/>
+            <unsigned/>
+            <autoincrement/>
+        </field>
+        <field name="bID" type="I">
+            <unsigned/>
+        </field>
+        <field name="sortOrder" type="I"></field>
+        <field name="featureTitle" type="C" size="255"></field>
+        <field name="featureDescription" type="X"></field>
+    </table>
+</schema>
