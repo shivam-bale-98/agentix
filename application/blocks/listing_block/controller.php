@@ -612,7 +612,7 @@ class Controller extends BlockController
         $pageResponse = $this->getPages();
 
         $data = [
-            "data" => View::elementRender(self::ITEM_ELEMENT, ["pages" => $pageResponse->getPages()]),
+            "data" => View::elementRender($this->getListItemElement(), ["pages" => $pageResponse->getPages()]),
             "loadMore" => $pageResponse->getLoadMore()
         ];
 
@@ -694,5 +694,17 @@ class Controller extends BlockController
         $pageResponse = $pl->getPage($page);
 
         return $pageResponse;
+    }
+
+    public function getListItemElement() {
+        if($this->getBlockFileName() == 'portfolio_listing') {
+            return "portfolio/view";
+        }
+        return self::ITEM_ELEMENT;
+    }
+
+    protected function getBlockFileName(){
+        $block = $this->getBlockObject();
+        return $block?->getBlockFilename();
     }
 }

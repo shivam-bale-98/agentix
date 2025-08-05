@@ -2,46 +2,49 @@
 
 
 
-<div class="tp-perspective-area">
+<div class="tp-perspective-area listing--block">
     <div class="container container-1685">
         <div class="row">
             <div class="col-xl-12 js-filter--section">
                 <div class="">
                     <div class="filters w-full flex justify-center lg:gap-5 gap-3 flex-wrap">
-                        <div class="select-box tabs relative multi-select">
-                            <select class="select2" name="business_category" id="bussiness_category" multiple="multiple">
-                                <option value="all">All Categories</option>
-                                <option value="R & B">R & B</option>
-                                <option value="Real Estate">Real Estate</option>
-                                <option value="Lifestyle">Lifestyle</option>
-                                <option value="Fashion">Fashion</option>
-                                <option value="Advertising">Advertising</option>         
-                            </select>
-                            <span class="arrow"></span>
-                         <div class="dropdown-result" data-lenis-prevent></div>
-                        </div>
+                        <!-- Dynamic Filters -->
+                        <?php if (isset($filters) && $filters) {
+                            foreach ($filters as $filter) {
+                                if ($filter["allowMultiple"]) {
+                                    $fieldType = "selectMultiple";
+                                } else {
+                                    $fieldType = "select";
+                                }
 
-
-                        <div class="select-box tabs relative single-select">
-                            <select class="select2" name="sector" id="sector">
-                                <option value="all">All Sectors</option>
-                                <option value="Web Development">Web Development</option>
-                                <option value="App Development">App Development</option>
-                                <option value="Marketing">Marketing</option>       
-                            </select>
-                            <span class="arrow"></span>
+                                echo '<div class="select-box tabs relative multi-select">';
+                                echo $form->{$fieldType}($filter["key"], $filter["options"], null, ["class" => "block--filter select2"]);
+                                echo '<span class="arrow"></span>
                          <div class="dropdown-result" data-lenis-prevent></div>
-                        </div>
+                        </div>';
+                            }
+                        } ?>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-xl-12">
-                <div class="tp-perspective-slider">
+                <div class="tp-perspective-slider bind--data">
                     <?php View::element("portfolio/view", ["pages" => $pages]); ?>
                 </div>
+
+                <div class="loader" style="display : none;">
+                    <h4><?= t("loading...") ?></h4>
+                </div>
+
+                <?php if(isset($enablePagination) && $enablePagination && isset($paginationStyle)) { ?>
+                    <div class="load--more" <?php if(!isset($loadMore) || $paginationStyle == "on_scroll") { ?>style="display: none" <?php } ?> data-pagination-style="<?php echo $paginationStyle; ?>" data-load-more="<?php echo $loadMore; ?>" ><span><?php echo isset($loadMoreText) ? $loadMoreText : t("Load More"); ?></span></div>
+                <?php } ?>
             </div>
         </div>
     </div>
+
+    <?php echo $token; ?>
 </div>

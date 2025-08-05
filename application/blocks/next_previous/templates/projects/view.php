@@ -10,7 +10,10 @@ defined('C5_EXECUTE') or die("Access Denied.");
     <div class="container container-1230">
         <div class="row justify-content-md-center">
             <div class="col-lg-8">
-                <?php if ($nextLinkURL && $nextLabel) { ?>
+                <?php if ($nextCollection && $nextLinkURL && $nextLabel) {
+                        $thumbnail = $nextCollection->getAttribute('thumbnail');
+                        $thumbnailURL = $thumbnail ? \Application\Concrete\Helpers\ImageHelper::getThumbnail($thumbnail) : $this->getThemePath() . '/assets/img/portfolio/portfolio-details-1/portfolio-details-np.jpg';
+                    ?>
                     <div class="tp-pd-1-np-box hover-reveal-item p-relative">
 
                         <a href="<?php echo $nextLinkURL ?>" class="tp-pd-1-np-content z-index-1 text-center">
@@ -18,7 +21,7 @@ defined('C5_EXECUTE') or die("Access Denied.");
                             <h4 class="tp-pd-1-np-title"><?php echo $nextLabel ?></h4>
                             <p>Research,UX, UI Design</p>
                         </a>
-                        <div class="tp-award-reveal-img" data-background="<?php echo $this->getThemePath() . '/assets/img/portfolio/portfolio-details-1/portfolio-details-np.jpg'; ?>"></div>
+                        <div class="tp-award-reveal-img" data-background="<?php echo $thumbnailURL; ?>"></div>
                     </div>
                 <?php } ?>
             </div>
