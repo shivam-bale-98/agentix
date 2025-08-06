@@ -2,7 +2,7 @@
 
 
 
-<div class="tp-perspective-area listing--block">
+<div class="tp-perspective-area listing--block bg-black xl:pt-24 pt-11">
     <div class="container container-1685">
         <div class="row">
             <div class="col-xl-12 js-filter--section">
@@ -13,11 +13,13 @@
                             foreach ($filters as $filter) {
                                 if ($filter["allowMultiple"]) {
                                     $fieldType = "selectMultiple";
+                                    $fieldClass = "multi-select";
                                 } else {
                                     $fieldType = "select";
+                                     $fieldClass = "single-select";
                                 }
 
-                                echo '<div class="select-box tabs relative multi-select">';
+                                echo '<div class="select-box tabs relative ' . $fieldClass . '">';
                                 echo $form->{$fieldType}($filter["key"], $filter["options"], null, ["class" => "block--filter select2"]);
                                 echo '<span class="arrow"></span>
                          <div class="dropdown-result" data-lenis-prevent></div>
