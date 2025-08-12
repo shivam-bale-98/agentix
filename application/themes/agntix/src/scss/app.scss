@@ -4,6 +4,8 @@
 // Tailwind if needed
 // @tailwind base;
 
+
+
 @mixin breakpoint($size) {
   @media only screen and (max-width: $size + px) {
     @content;
@@ -17,6 +19,12 @@
 
 @tailwind components;
 @tailwind utilities;
+
+.tp-header-logo, .des-footer-logo {
+  img {
+    filter: brightness(0) invert(1);
+  }
+}
 
 .filters {
   .select-box {

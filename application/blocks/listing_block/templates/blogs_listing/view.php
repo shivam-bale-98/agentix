@@ -43,42 +43,6 @@
                 <div class="row">
                     <?php View::element("news/view", ["pages" => $pages]); ?>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="basic-pagination-wrap text-center pt-20">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="basic-pagination mb-0">
-                                        <nav>
-                                            <ul>
-                                                <li>
-                                                    <a href="blog-grid.html">
-                                                        <i class="fa-regular fa-angle-left"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <span class="current">1</span>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-grid.html">2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-grid.html">3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-grid.html">
-                                                        <i class="fa-regular fa-angle-right"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 

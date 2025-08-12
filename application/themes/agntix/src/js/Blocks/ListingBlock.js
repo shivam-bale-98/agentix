@@ -83,7 +83,7 @@ export default class ListingBlock {
     formParams = () => {
         let data = {};
 
-        data["keywords"] = this.keywords.val();
+        data["keywords"] = this.keywords.val() ?? "";
         data["page"] = this.page;
         data["ccm_token"] = this.ccmToken.val();
 
@@ -137,6 +137,7 @@ export default class ListingBlock {
         this.bindData.append(response.data);
         this.hideLoader();
         this.toggleLoadMore(response.loadMore);
+        this.callback();
     };
 
     setHistory = () => {
@@ -165,5 +166,59 @@ export default class ListingBlock {
             title: response.title,
             text: response.message
         });
+    }
+
+    callback = () => {
+        // 04. Common Js//
+        $("[data-bg-color]").each(function () {
+        $(this).css("background-color", $(this).attr("data-bg-color"));
+        });
+
+        $("[data-background").each(function () {
+        $(this).css(
+            "background-image",
+            "url( " + $(this).attr("data-background") + "  )"
+        );
+        });
+
+        $("[data-width]").each(function () {
+        $(this).css("width", $(this).attr("data-width"));
+        });
+
+        $("[data-text-color]").each(function () {
+        $(this).css("color", $(this).attr("data-text-color"));
+        });
+
+        // 76. perspective-slider animation //
+        function perspective() {
+
+            if ($('.tp-perspective-slider').length) {
+
+                gsap.set('.tp-perspective-slider .tp-perspective-main .tp-perspective-inner', { perspective: 60 });
+
+                $('.tp-perspective-slider .tp-perspective-main .tp-perspective-inner .tp-perspective-image').each(function () {
+                    var slide = $(this);
+
+                    gsap.fromTo(this, {
+                        rotationX: 1.8,
+                        scaleX: 1,
+                        z: '0vh'
+                    }, {
+                        rotationX: -.5,
+                        scaleX: 1,
+                        z: '-2vh',
+                        scrollTrigger: {
+                            trigger: slide,
+                            start: "top+=150px bottom",
+                            end: "bottom top",
+                            immediateRender: false,
+                            scrub: 0.1,
+                        }
+                    });
+                });
+
+            }
+        }
+        perspective()
     }
 }

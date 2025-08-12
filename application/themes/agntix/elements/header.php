@@ -69,7 +69,8 @@ $themePath = $this->getThemePath();
                     </div>
                 </div>
                 <div class="tp-offcanvas-menu counter-row">
-                    <nav></nav>
+                    <nav>
+                    </nav>
                 </div>
             </div>
             <div class="tp-offcanvas-2-right right-box d-none d-md-block p-relative">
@@ -100,7 +101,9 @@ $themePath = $this->getThemePath();
             <div class="row align-items-center">
                 <div class="col-6">
                     <div class="tp-header-logo">
-                        <a href="index.html"><img data-width="140px" src="<?php echo $this->getThemePath() . '/assets/img/logo/logo-white.png'; ?>" alt="Agentix"></a>
+                        <a href="<?php echo View::url('/'); ?>">
+                            <img class="" data-width="140px" src="<?php echo $this->getThemePath() . '/assets/images/MMv1.svg'; ?>" alt="Agentix">
+                        </a>
                     </div>
                 </div>
                 <div class="col-6">

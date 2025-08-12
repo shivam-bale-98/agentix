@@ -1,6 +1,6 @@
 <?php
 
-namespace Concrete\Block\NextPrevious;
+namespace Application\Block\NextPrevious;
 
 use Concrete\Core\Block\BlockController;
 use Concrete\Core\Database\Connection\Connection;

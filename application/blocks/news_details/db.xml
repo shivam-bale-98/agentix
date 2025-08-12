@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btNewsDetails">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="body" type="X2"></field>
+        <field name="imageOne" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageTwo" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="bodyTwo" type="X2"></field>
+        <field name="quote" type="X"></field>
+        <field name="author" type="C" size="255"></field>
+        <field name="bodyThree" type="X2"></field>
+    </table>
+</schema>

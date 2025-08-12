@@ -12,7 +12,9 @@
                      <?php $s = Stack::getByName("Footer Subtitle");
                       $s->display(); ?>
                     <div class="des-footer-logo">
-                        <a href="<?php echo View::url('/'); ?>"><img data-width="140px" src="<?php echo $this->getThemePath() . '/assets/img/logo/logo-white.png'; ?>" alt=""></a>
+                        <a href="<?php echo View::url('/'); ?>">
+                            <img data-width="140px" src="<?php echo $this->getThemePath() . '/assets/images/MMv1.svg'; ?>" alt="">
+                        </a>
                     </div>
                     
                     <?php $s = Stack::getByName("Footer Location");
