@@ -84,11 +84,17 @@
 .mb-40 {
   margin-bottom: 10rem;
 }
-.mb-60 {
-  margin-bottom: 15rem;
-}
 .mt-40 {
   margin-top: 10rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.\!mt-12 {
+  margin-top: 3rem !important;
+}
+.\!mt-0 {
+  margin-top: 0px !important;
 }
 .block {
   display: block;
@@ -128,6 +134,9 @@
 .h-full {
   height: 100%;
 }
+.h-\[110\%\] {
+  height: 110%;
+}
 .w-full {
   width: 100%;
 }
@@ -136,6 +145,12 @@
 }
 .max-w-48 {
   max-width: 12rem;
+}
+.max-w-\[40rem\] {
+  max-width: 40rem;
+}
+.max-w-\[80\%\] {
+  max-width: 80%;
 }
 .scale-125 {
   --tw-scale-x: 1.25;
@@ -199,6 +214,10 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .p-0 {
   padding: 0px;
 }
@@ -222,6 +241,12 @@
 }
 .pt-40 {
   padding-top: 10rem;
+}
+.\!pb-0 {
+  padding-bottom: 0px !important;
+}
+.\!pt-0 {
+  padding-top: 0px !important;
 }
 .text-center {
   text-align: center;
@@ -248,6 +273,10 @@
 }
 .outline {
   outline-style: solid;
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .grayscale {
   --tw-grayscale: grayscale(100%);

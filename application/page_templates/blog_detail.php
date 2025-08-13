@@ -158,24 +158,10 @@
              <div class="col-lg-2"></div>
          </div>
      </div>
-     <div class="container container-1750">
-         <div class="row justify-content-center">
-             <div class="col-xl-12">
-                 <a href="#">
-                     <div class="postbox-details-nevigation-wrap p-relative">
-                         <div class="postbox-details-nevigation-thumb-bg">
-                             <div class="postbox-details-nevigation-thumb">
-                                 <img data-speed=".8" src="assets/img/blog/blog-details/blog-details-2.jpg" alt="">
-                             </div>
-                         </div>
-                         <div class="postbox-details-nevigation-content">
-                             <span>Next Post</span>
-                             <h4 class="postbox-details-nevigation-title">Tips for thriving in our <br> virtual world</h4>
-                         </div>
-                     </div>
-                 </a>
-             </div>
-         </div>
-     </div>
+
+     <?php $a = new Area('next previous block');
+                $a->display($c); ?>
+
+     
  </section>
  <!-- postbox area end -->
