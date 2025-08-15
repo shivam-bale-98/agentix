@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btHowWeWork">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="paddingTop" type="C" size="1">
+            <unsigned/>
+        </field>
+        <field name="paddingBottom" type="C" size="1">
+            <unsigned/>
+        </field>
+        <field name="subtitle" type="C" size="255"></field>
+        <field name="title" type="X2"></field>
+    </table>
+    <table name="btHowWeWorkFeaturesEntries">
+        <field name="id" type="I">
+            <key/>
+            <unsigned/>
+            <autoincrement/>
+        </field>
+        <field name="bID" type="I">
+            <unsigned/>
+        </field>
+        <field name="sortOrder" type="I"></field>
+        <field name="featureTitle" type="C" size="255"></field>
+        <field name="featureDescription" type="X2"></field>
+    </table>
+</schema>

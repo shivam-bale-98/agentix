@@ -4,8 +4,6 @@
 // Tailwind if needed
 // @tailwind base;
 
-
-
 @mixin breakpoint($size) {
   @media only screen and (max-width: $size + px) {
     @content;
@@ -20,7 +18,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.tp-header-logo, .des-footer-logo {
+.tp-header-logo,
+.des-footer-logo {
   img {
     filter: brightness(0) invert(1);
   }
@@ -38,11 +37,11 @@
       }
     }
     &.single-select {
-       @include breakpoint(991) {
-         max-width: 100% !important;
-         width: 100% !important;
-       }
-      .select2-container{
+      @include breakpoint(991) {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .select2-container {
         height: 100% !important;
         .selection {
           height: 100%;
@@ -124,8 +123,8 @@
         flex-wrap: wrap;
         color: white;
         @include breakpoint(991) {
-           height: auto !important;
-           gap: 5px !important;
+          height: auto !important;
+          gap: 5px !important;
         }
         .select2-selection__choice {
           margin-top: 0px !important;
@@ -136,8 +135,6 @@
           font-size: 16px !important;
           line-height: 1.2 !important;
           display: flex;
-
-          
         }
       }
       .select2-selection__choice__remove {
@@ -197,9 +194,9 @@
     }
 
     .select2-results {
-      .select2-results__option--selected{
-          background-color: rgba($color: #FF5722, $alpha: 0.3);
-        }
+      .select2-results__option--selected {
+        background-color: rgba($color: #ff5722, $alpha: 0.3);
+      }
       .select2-results__options {
         display: flex;
         flex-wrap: wrap;
@@ -231,7 +228,6 @@
             // text-shadow: 0.7px 0 0 rgba($color: black, $alpha: 1);
           }
         }
-        
       }
     }
   }
@@ -247,3 +243,44 @@
     }
   }
 }
+
+.formidable {
+  .form-group {
+    margin-bottom: 1.25rem;
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--tp-common-white);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    input,
+    textarea {
+      background: #1d1d1f;
+      border-color: #1d1d1f;
+      color: var(--tp-common-white);
+      box-shadow: none !important;
+      &:focus {
+        border-color: #FFF669;
+        background-color: var(--tp-common-black-7);
+      }
+    }
+    textarea {
+      resize: none;
+      height: 160px;
+    }
+  }
+}
+
+
+.tp-contact-form-btn button {
+  background-color: #FFF669 !important;
+  border-color: #FFF669 !important;
+}
+
+html:not(.ccm-edit-mode) {
+  .collapse {
+    visibility: visible !important;
+  }
+}
+  
