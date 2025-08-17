@@ -56,7 +56,7 @@ export default new (class App {
     this.html = $('html');
     this.htmlBody = $('body');
     this.siteLoader = $('.site-loader');
-    this.header = $('header');
+    this.header = $('header.header');
     this.siteBody = $('.site-body');
     this.footer = $('footer');
     this.gotoTop = $('#gotoTop');
@@ -117,19 +117,19 @@ export default new (class App {
   windowScroll = () => {
     const topOffset = this.window.scrollTop();
 
-    this.header.toggleClass('top', topOffset > 300);
-    this.header.toggleClass('sticky', topOffset > 600);
-    if (topOffset > this.previousScroll || topOffset < 500) {
-      this.header.removeClass('sticky');
-    } else if (topOffset < this.previousScroll) {
-      this.header.addClass('sticky');
-      // Additional checking so the header will not flicker
-      if (topOffset > 250) {
-        this.header.addClass('sticky');
-      } else {
-        this.header.removeClass('sticky');
-      }
-    }
+		this.header.toggleClass("top", topOffset > 80);
+		this.header.toggleClass("sticky-header", topOffset > 300);
+		if (topOffset > this.previousScroll || topOffset < 400) {
+			this.header.removeClass("sticky-header");
+		} else if (topOffset < this.previousScroll) {
+			this.header.addClass("sticky-header");
+			// Additional checking so the header will not flicker
+			if (topOffset > 250) {
+				this.header.addClass("sticky-header");
+			} else {
+				this.header.removeClass("sticky-header");
+			}
+		}
 
     this.previousScroll = topOffset;
     this.gotoTop.toggleClass(

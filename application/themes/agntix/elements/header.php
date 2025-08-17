@@ -94,15 +94,15 @@ $themePath = $this->getThemePath();
     </div>
     <!-- offcanvas end -->
 
-<header>
+<header class="header fixed w-full top-0">
 
-    <div class="tp-header-2-area z-index-3 mt-40 ">
+    <div class="tp-header-2-area z-index-3 xl:!mt-7">
         <div class="container container-1750">
             <div class="row align-items-center">
                 <div class="col-6">
                     <div class="tp-header-logo">
                         <a href="<?php echo View::url('/'); ?>">
-                            <img class="" data-width="140px" src="<?php echo $this->getThemePath() . '/assets/images/MMv1.svg'; ?>" alt="Agentix">
+                            <img class=""  src="<?php echo $this->getThemePath() . '/assets/images/MMv1.svg'; ?>" alt="Agentix">
                         </a>
                     </div>
                 </div>

@@ -45,7 +45,7 @@ if ($image) {
     <?php } ?>
     <?php if (isset($title) && trim($title) != "") { ?>
         <div class="container container-1510">
-            <div class="des-project-title-wrap pb-90 pt-140">
+            <div class="des-project-title-wrap xl:!pb-20 !pb-10  xl:!pt-24 !pt-10">
                 <div class="row align-items-center">
                     <div class="col-xxl-6 col-xl-5">
                         <div class="des-project-title-box">

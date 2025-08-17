@@ -87,7 +87,7 @@ if ($imageEight) {
                 </div>
             </div>
             <div class="row w-full">
-                <div class="col-md-6">
+                <div class="col-md-6 hidden">
                     <div class="tp-hero-2-avater-box d-flex align-items-center justify-content-center justify-content-md-start tp_fade_anim" data-delay=".7" data-on-scroll="3">
                         <div class="tp-hero-2-avater">
                             <img src="assets/img/home-02/hero/avater.png" alt="">
@@ -105,12 +105,12 @@ if ($imageEight) {
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
 
 
                     <?php
                     if (trim($linkTag_URL) != "") { ?>
-                        <div class="tp-hero-2-btn-box text-center text-md-end tp_fade_anim" data-delay=".7" data-on-scroll="3">
+                        <div class="tp-hero-2-btn-box text-center text-md-end tp_fade_anim flex justify-center" data-delay=".7" data-on-scroll="3">
                             <?php
                             $linkTag_Attributes = [];
                             $linkTag_Attributes['href'] = $linkTag_URL;
@@ -152,7 +152,7 @@ if ($imageEight) {
                     <?php if ($imageOne) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-1 ">
-                                <img class="lg:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailOne ?>" alt="<?php echo $imageOne->getTitle(); ?>" />
+                                <img class="md:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailOne ?>" alt="<?php echo $imageOne->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -162,7 +162,7 @@ if ($imageEight) {
                     <?php if ($imageTwo) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-2 text-end ">
-                                <img class="lg:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailTwo ?>" alt="<?php echo $imageTwo->getTitle(); ?>" />
+                                <img class="md:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailTwo ?>" alt="<?php echo $imageTwo->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -171,7 +171,7 @@ if ($imageEight) {
                     <?php if ($imageThree) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-3 text-end ">
-                                <img class="lg:w-[25%] min-w-52 aspect-square" src="<?php echo $thumbnailThree ?>" alt="<?php echo $imageThree->getTitle(); ?>" />
+                                <img class="lg:w-1/4 w-[35%] lg:min-w-52 aspect-square" src="<?php echo $thumbnailThree ?>" alt="<?php echo $imageThree->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -184,7 +184,7 @@ if ($imageEight) {
                     <?php if ($imageFour) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-1">
-                                <img class="lg:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailFour ?>" alt="<?php echo $imageFour->getTitle(); ?>" />
+                                <img class="md:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailFour ?>" alt="<?php echo $imageFour->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -193,7 +193,7 @@ if ($imageEight) {
                     <?php if ($imageFive) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-2 text-end">
-                                <img class="lg:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailFive ?>" alt="<?php echo $imageFive->getTitle(); ?>" />
+                                <img class="md:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailFive ?>" alt="<?php echo $imageFive->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -202,7 +202,7 @@ if ($imageEight) {
                     <?php if ($imageSix) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-3 text-end">
-                                <img class="lg:w-[25%] min-w-52 aspect-square" src="<?php echo $thumbnailSix ?>" alt="<?php echo $imageSix->getTitle(); ?>" />
+                                <img class="lg:w-1/4 w-[35%] lg:min-w-52 aspect-square" src="<?php echo $thumbnailSix ?>" alt="<?php echo $imageSix->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -215,7 +215,7 @@ if ($imageEight) {
                     <?php if ($imageSeven) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-1">
-                                <img class="lg:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailSeven ?>" alt="<?php echo $imageSeven->getTitle(); ?>" />
+                                <img class="md:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailSeven ?>" alt="<?php echo $imageSeven->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -224,7 +224,7 @@ if ($imageEight) {
                     <?php if ($imageEight) { ?>
                         <div class="col-12">
                             <div class="tp-heo-2-img tp-hero-2-img-2 text-end">
-                                <img class="lg:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailEight ?>" alt="<?php echo $imageEight->getTitle(); ?>" />
+                                <img class="md:w-[16%] min-w-52 aspect-[0.8]" src="<?php echo $thumbnailEight ?>" alt="<?php echo $imageEight->getTitle(); ?>" />
                             </div>
                         </div>
                     <?php } ?>

@@ -1,5 +1,5 @@
 <?php defined("C5_EXECUTE") or die("Access Denied."); ?>
-<section class="listing--block des-text-moving-2-area pt-200 pb-60 z-index-1">
+<section class="services-listing listing--block des-text-moving-2-area pt-200 pb-60 z-index-1">
 
 
 
@@ -16,7 +16,7 @@
                  <h4 class="des-text-title"><?php echo h($title); ?></h4>
             </div>
              <?php } ?>
-            <p>Check out some of my projects by area of expertise</p>
+             <p><?php echo $searchPlaceHolderText ?></p>
         </div>
         <?php View::element("services/view", ["pages" => $pages]); ?>
     </div>

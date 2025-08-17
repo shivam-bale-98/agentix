@@ -15,7 +15,7 @@ $thumbnail = "";
 
 
 <?php if (!empty($list_items)) { ?>
-    <div class="des-team-area pb-200 <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?>">
+    <section class="our-team-section des-team-area pb-200 <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?>">
         <div class="container container-1750">
             <div class="row">
                 <div class="col-xl-12">
@@ -50,5 +50,5 @@ $thumbnail = "";
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 <?php } ?>

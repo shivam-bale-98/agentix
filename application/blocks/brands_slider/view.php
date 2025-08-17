@@ -43,7 +43,7 @@ $thumbnailTwo = "";
         </div>
 
     <?php } ?>
-    <div class="des-brand-moving-wrap">
+    <div class="des-brand-moving-wrap max-sm:hidden">
         <?php if (!empty($rowOne_items)) { ?>
             <div class="des-brand-moving-top moving-text pb-10">
                 <div class="des-brand-item wrapper-text black-style d-flex align-items-center">
@@ -64,7 +64,7 @@ $thumbnailTwo = "";
 
                 <div class="des-brand-item wrapper-text black-style d-flex align-items-center">
                     <?php foreach ($rowTwo_items as $rowTwo_item_key => $rowTwo_item) { ?>
-                        <?php if ($rowTwo_item["imageTwo"]) { 
+                        <?php if ($rowTwo_item["imageTwo"]) {
                             $thumbnailTwo = $ih->getThumbnail($rowTwo_item["imageTwo"], 500, 500);
                         ?>
                             <div class="des-brand-item-inner">
@@ -75,5 +75,26 @@ $thumbnailTwo = "";
                 </div>
             <?php } ?>
         </div>
+    </div>
+
+    <div class="brands-mobile flex flex-wrap justify-between sm:hidden gap-[10px] !px-[15px]">
+        <?php foreach ($rowOne_items as $rowOne_item_key => $rowOne_item) { ?>
+            <?php if ($rowOne_item["imageOne"]) {
+                $thumbnailOne = $ih->getThumbnail($rowOne_item["imageOne"], 500, 500);
+            ?>
+                <div class="des-brand-item-inner">
+                    <img src="<?php echo $thumbnailOne ?>" alt="<?php echo $rowOne_item["imageOne"]->getTitle(); ?>">
+                </div>
+            <?php } ?>
+        <?php } ?>
+        <?php foreach ($rowTwo_items as $rowTwo_item_key => $rowTwo_item) { ?>
+            <?php if ($rowTwo_item["imageTwo"]) {
+                $thumbnailTwo = $ih->getThumbnail($rowTwo_item["imageTwo"], 500, 500);
+            ?>
+                <div class="des-brand-item-inner">
+                    <img src="<?php echo $thumbnailTwo ?>" alt="<?php echo $rowTwo_item["imageTwo"]->getTitle(); ?>">
+                </div>
+            <?php } ?>
+        <?php } ?>
     </div>
 </section>

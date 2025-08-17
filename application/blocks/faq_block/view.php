@@ -9,7 +9,7 @@
 
 
 
-<div class="app-faq-area service-faq-style p-relative pb-140 xl:pt-24 pt-12 <?php if (isset($paddingTop) && trim($paddingTop) == 1) { ?> !pt-0 <?php } ?> <?php if (isset($paddingBottom) && trim($paddingBottom) == 1) { ?> !pt-0 <?php } ?>">
+<section class="app-faq-area service-faq-style p-relative pb-140 xl:pt-24 pt-12 <?php if (isset($paddingTop) && trim($paddingTop) == 1) { ?> !pt-0 <?php } ?> <?php if (isset($paddingBottom) && trim($paddingBottom) == 1) { ?> !pt-0 <?php } ?>">
     <div class="container container-1230">
         <div class="row justify-content-center">
             <?php if (isset($title) && trim($title) != "") { ?>
@@ -30,12 +30,12 @@
                         <div class="ai-faq-accordion-wrap">
                             <div class="accordion" id="accordionExample1">
                                 <?php foreach ($faqs_items as $faqs_item_key => $faqs_item) { ?>
-                                    <?php 
-                                        $accordion_id = "collapse" . ($faqs_item_key + 1);
-                                        $is_first = ($faqs_item_key === 0);
-                                        $expanded_class = $is_first ? "" : "collapsed";
-                                        $aria_expanded = $is_first ? "true" : "false";
-                                        $collapse_class = $is_first ? "accordion-collapse collapse show" : "accordion-collapse collapse";
+                                    <?php
+                                    $accordion_id = "collapse" . ($faqs_item_key + 1);
+                                    $is_first = ($faqs_item_key === 0);
+                                    $expanded_class = $is_first ? "" : "collapsed";
+                                    $aria_expanded = $is_first ? "true" : "false";
+                                    $collapse_class = $is_first ? "accordion-collapse collapse show" : "accordion-collapse collapse";
                                     ?>
                                     <div class="accordion-items">
                                         <?php if (isset($faqs_item["faqTitle"]) && trim($faqs_item["faqTitle"]) != "") { ?>
@@ -67,4 +67,4 @@
             <?php } ?>
         </div>
     </div>
-</div>
+</section>

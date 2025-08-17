@@ -7,13 +7,14 @@
         $currentBulletClass = $bulletClasses[$index % 4];
 ?>
         <div class="des-text-moving-top active moving-text">
-            <div class="des-text-item hover-reveal-item <?php echo $currentBulletClass; ?> sm wrapper-text">
-                <div class="d-flex align-items-center">
+            <div class="des-text-item hover-reveal-item  <?php echo $currentBulletClass; ?> sm wrapper-text">
+                
+                <a href="<?php echo $url ?>" class="d-flex align-items-center">
                     <span><?php echo $title ?></span>
                     <span><?php echo $title ?></span>
                     <span><?php echo $title ?></span>
                     <span><?php echo $title ?></span>
-                </div>
+                </a>
                 <div class="des-text-reveal-img">
                     <img src="<?php echo $thumb ?>" alt="<?php echo $title ?>">
                 </div>
