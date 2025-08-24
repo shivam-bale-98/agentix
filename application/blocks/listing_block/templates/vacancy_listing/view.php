@@ -2,7 +2,7 @@
 
 
 
-<section class="tp-career-opening-ptb pb-160">
+<section class="tp-career-opening-ptb sm:pb-[6.25rem] pb-[3.75rem]">
     <div class="container container-1230">
 
 
@@ -19,7 +19,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="tp-benefit-heading mb-100">
+                <div class="tp-benefit-heading xmd:!mb-[6.25rem] !mb-0">
                     <div class="ar-about-us-4-title-box shape-color tp_fade_anim d-flex align-items-center mb-15">
                         <span class="tp-section-subtitle pre">
                             <!--  -->
@@ -43,7 +43,7 @@
         </div>
 
 
-        <div class="tp-career-opening-item">
+        <div class="tp-career-opening-item career-heading">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="tp-career-opening-heading">

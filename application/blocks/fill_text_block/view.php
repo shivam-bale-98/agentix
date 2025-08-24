@@ -3,7 +3,7 @@
 
 
 <!-- about moving area start -->
-<section class="des-about-area pb-200 <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?>">
+<section class="des-about-area sm:pb-[6.25rem] pb-[3.75rem] <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?>">
 	<div class="container container-1230">
 		<div class="row justify-content-center">
 			<div class="col-xl-12">

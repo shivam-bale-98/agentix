@@ -42,7 +42,7 @@ if ($imageRight) {
 
 
 
-<section class="crp-success-area mb-70 p-relative z-[3] <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?>">
+<section class="crp-success-area  p-relative z-[3] <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?>">
     <div class="container-fluid p-0">
         <div class="row gx-10">
             <div class="col-xl-6">

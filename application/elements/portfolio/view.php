@@ -1,4 +1,5 @@
 <?php
+
 use  \Application\Concrete\Helpers\ImageHelper;
 
 $ih = new ImageHelper();
@@ -19,23 +20,24 @@ $isMobile = $detect->isMobile() && !$detect->isTablet();
         $logo_attribute = $page->getAttribute('logo');
         $logo = $ih->getThumbnail($logo_attribute, 200, 200, false);
 ?>
+        <a class="cursor-hide" href="<?php echo $url ?>">
+            <div class="tp-perspective-main">
+                <div class="tp-perspective-inner">
+                    <div class="tp-perspective-image bg-center" data-background="<?php echo $display_thumb ?>">
 
-        <div class="tp-perspective-main">
-            <div class="tp-perspective-inner">
-                <div class="tp-perspective-image bg-center" data-background="<?php echo $display_thumb ?>">
-
-                    <div class="tp-perspective-content flex flex-col items-center">
-                        <div class="xl:size-36 size-24 bg-white rounded-full xl:p-4 p-2 xl:mb-4 mb-2">
-                            <img class="w-full h-full object-contain" src="<?php echo $logo ?>" alt="<?php echo h($title) ?>">
+                        <div class="tp-perspective-content flex flex-col items-center">
+                            <div class="xl:size-36 size-24 bg-white rounded-full p-[0.5rem] xl:p-[1rem]  mb-[1rem] xl:mb-[2rem] ">
+                                <img class="w-full h-full object-contain" src="<?php echo $logo ?>" alt="<?php echo h($title) ?>">
+                            </div>
+                            <span class="tp-perspective-category tp_reveal_anim !mb-[1rem] xl:!mb-[2rem] max-sm:py-[0.625rem] max-sm:px-[1.25rem] border rounded-full border-white min-w-[300px] text-center"><?php echo $bussiness_category ?></span>
+                            <h1 class="tp-perspective-title tp_reveal_anim not-hide-cursor" data-cursor="View<br>Demo">
+                                <?php echo $title ?>
+                            </h1>
                         </div>
-                        <span class="tp-perspective-category tp_reveal_anim"><?php echo $bussiness_category ?></span>
-                        <h1 class="tp-perspective-title tp_reveal_anim not-hide-cursor" data-cursor="View<br>Demo">
-                            <a class="cursor-hide" href="<?php echo $url ?>"><?php echo $title ?></a>
-                        </h1>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     <?php }
 } else {  ?>
     <h4><?= t("No Items Found") ?></h4>

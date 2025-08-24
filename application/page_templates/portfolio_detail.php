@@ -19,7 +19,7 @@ $description = $c->getCollectionDescription();
 ?>
 
 
-<section class="tp-portfolio-details-1-area pt-110 pb-140 z-[2] relative">
+<section class="tp-portfolio-details-1-area pt-[8.75rem]  xl:pb-[6.25rem] pb-[3.125rem] z-[2] relative">
     <div class="container container-1830 z-[1] relative">
         <div class="row">
             <div class="col-lg-12">

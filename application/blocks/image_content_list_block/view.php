@@ -37,7 +37,7 @@ if ($image) {
 
 
 
-<section class="<?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?> des-project-area pb-200">
+<section class="<?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?> des-project-area sm:pb-[6.25rem] pb-[3.75rem]">
     <?php if ($image) { ?>
     <div class="des-project-banner">
         <img class="w-100" data-speed=".7" src="<?php echo $thumbnail ?>" alt="<?php echo h($title); ?>">

@@ -12,7 +12,7 @@
 
 
 <!-- benefit area start -->
-<section class="tp-benefit-ptb pb-160 <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?> <?php if (isset($PaddingTop) && trim($PaddingTop) == 1) { ?> !pt-0 <?php } ?> <?php if (isset($PaddingBottom) && trim($PaddingBottom) == 1) { ?> !pb-0 <?php } ?>">
+<section class="tp-benefit-ptb xl:pb-[6.25rem] sm:pb-[3.75rem] <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?> <?php if (isset($PaddingTop) && trim($PaddingTop) == 1) { ?> !pt-0 <?php } ?> <?php if (isset($PaddingBottom) && trim($PaddingBottom) == 1) { ?> !pb-0 <?php } ?>">
     <div class="container container-1230">
         <div class="row">
             <div class="col-lg-12">

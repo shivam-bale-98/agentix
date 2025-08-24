@@ -9,7 +9,16 @@ module.exports = {
 		"../../page_templates/**/*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+				xxl: "1600px",
+				xl: "1279px",
+				xmd: "991px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+			},
+    },
   },
   plugins: [],
 }

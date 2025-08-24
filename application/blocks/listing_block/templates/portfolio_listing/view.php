@@ -2,7 +2,7 @@
 
 
 
-<div class="tp-perspective-area listing--block bg-black xl:pt-24 pt-11">
+<div class="tp-perspective-area listing--block bg-black  xl:pt-[2.5rem] pt-[1.25rem]">
     <div class="container container-1685">
         <div class="row">
             <div class="col-xl-12 js-filter--section">
@@ -21,6 +21,9 @@
 
                                 echo '<div class="select-box tabs relative ' . $fieldClass . '">';
                                 echo $form->{$fieldType}($filter["key"], $filter["options"], null, ["class" => "block--filter select2"]);
+                                if ($fieldType === "selectMultiple") {
+                                    echo '<span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>';
+                                }
                                 echo '<span class="arrow"></span>
                          <div class="dropdown-result" data-lenis-prevent></div>
                         </div>';

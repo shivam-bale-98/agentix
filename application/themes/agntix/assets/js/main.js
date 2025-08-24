@@ -687,8 +687,10 @@
 
   // 32. portfolio panel //
   pr.add("(min-width: 767px)", () => {
-    let otherSections = document.querySelectorAll(".des-portfolio-panel");
+    
     setTimeout(() => {
+      let otherSections = document.querySelectorAll(".des-portfolio-panel");
+      console.log(otherSections, "portfolios");
       otherSections.forEach((section, index) => {
         gsap.set(otherSections, {
           scale: 1,

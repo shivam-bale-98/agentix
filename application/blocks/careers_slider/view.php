@@ -17,7 +17,7 @@ $thumbnailOne = "";
 <!-- career slider area start -->
 <?php if (!empty($slider_items)) { ?>
 
-    <div class="tp-career-slider-ptb pb-180 <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?> <?php if (isset($PaddingBottom) && trim($PaddingBottom) == 1) { ?> !pb-0 <?php } ?>">
+    <div class="tp-career-slider-ptb xl:pb-[6.25rem] sm:pb-[3.75rem] <?php if (isset($hideBlock) && trim($hideBlock) == 1) { ?>hide-block<?php } ?> <?php if (isset($PaddingBottom) && trim($PaddingBottom) == 1) { ?> !pb-0 <?php } ?>">
         <div class="tp-career-slider-wrapper">
             <div class="tp-career-slider-active swiper-container">
                 <div class="swiper-wrapper align-items-center slide-transtion">
